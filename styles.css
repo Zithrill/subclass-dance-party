@@ -38,3 +38,42 @@ body, a:link, a:visited, a:active{
     border-radius:10px;
     position:absolute;
 }
+
+@-webkit-keyframes first {
+    50% {
+        margin-left: 1100px;
+    }
+}
+
+@-webkit-keyframes second {
+    50% {
+        margin-top: 700px;
+    }
+}
+
+@-webkit-keyframes third {
+    50% {
+        margin-top: 700px;
+        margin-left: 1100px;
+    }
+}
+
+@-webkit-keyframes fourth {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+
+.dancer.first {
+  -webkit-animation: first 3s linear;
+}
+.dancer.second {
+  -webkit-animation: second 3s ease-in-out;
+}
+
+.dancer.third {
+  -webkit-animation: third 3s ease-in;
+}
+
+.dancer.fourth {
+  -webkit-animation: fourth 0.5s;
+}
