@@ -64,14 +64,14 @@ body, a:link, a:visited, a:active{
 }
 
 .dancer.first {
-  -webkit-animation: first 3s linear;
+  -webkit-animation: first 10s linear;
 }
 .dancer.second {
-  -webkit-animation: second 3s ease-in-out;
+  -webkit-animation: second 10s ease-in-out;
 }
 
 .dancer.third {
-  -webkit-animation: third 3s ease-in;
+  -webkit-animation: third 10s ease-in;
 }
 
 .dancer.fourth {

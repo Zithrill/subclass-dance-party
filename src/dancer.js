@@ -1,4 +1,4 @@
-var Dancer = function(top, left, timeBetweenSteps){
+ var Dancer = function(top, left, timeBetweenSteps){
   this._timeBetweenSteps = timeBetweenSteps;
 
   this.step();
@@ -7,8 +7,10 @@ var Dancer = function(top, left, timeBetweenSteps){
 };
 
 Dancer.prototype.step = function () {
-  var stepper = this.step.bind(this);
-  setTimeout(stepper, this._timeBetweenSteps);
+  var context = this;
+  setTimeout(function() {
+  	context.step();
+  }, this._timeBetweenSteps);
 };
 
 Dancer.prototype.setPosition = function(top, left) {
