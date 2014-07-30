@@ -1,16 +1,12 @@
- var Dancer = function(top, left, timeBetweenSteps){
+var Dancer = function(top, left, timeBetweenSteps){
   this._timeBetweenSteps = timeBetweenSteps;
-
   this.step();
-
   this.setPosition(top, left);
 };
 
 Dancer.prototype.step = function () {
-  var context = this;
-  setTimeout(function() {
-  	context.step();
-  }, this._timeBetweenSteps);
+  var stepper = this.step.bind(this);
+  setTimeout(stepper, this._timeBetweenSteps);
 };
 
 Dancer.prototype.setPosition = function(top, left) {
@@ -19,3 +15,4 @@ Dancer.prototype.setPosition = function(top, left) {
     left: left
   });
 };
+

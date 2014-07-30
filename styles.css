@@ -24,8 +24,7 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+
   position:absolute;
 }
 .jumpyDancer{
@@ -39,41 +38,53 @@ body, a:link, a:visited, a:active{
     position:absolute;
 }
 
-@-webkit-keyframes first {
-    50% {
-        margin-left: 1100px;
-    }
+.lineUp {
+  float:right;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-@-webkit-keyframes second {
-    50% {
-        margin-top: 700px;
-    }
+.lineupbar {
+  position: absolute;
+  display: inline;
+  height: 25px;
+  width: 100%;
+  top: 75%;
+  background-color: black;
+  z-index: 3;
 }
-
-@-webkit-keyframes third {
-    50% {
-        margin-top: 700px;
-        margin-left: 1100px;
-    }
+.sam {
+  background-image: url(src/samuel_jackson.png);
+  background-size: 70px 70px;
+  width: 70px;
+  height: 70px;
+  display: block;
+  float: left;
+  z-index: 4;
 }
-
-@-webkit-keyframes fourth {
-    from { -webkit-transform: rotate(0deg); }
-    to { -webkit-transform: rotate(360deg); }
+.theCage{
+  background-image: url(src/nicolas_cage.png);
+  background-size: 70px 70px;
+  width: 70px;
+  height: 70px;
+  display: block;
+  float: left;
+  z-index: 4;
 }
-
-.dancer.first {
-  -webkit-animation: first 10s linear;
+.nigel{
+  background-image: url(src/lesia.gif);
+  background-size: 70px 70px;
+  width: 70px;
+  height: 70px;
+  display: block;
+  float: left;
+  z-index: 4;
 }
-.dancer.second {
-  -webkit-animation: second 10s ease-in-out;
+.tiltLeft{
+  transform:rotate(7deg);
+-ms-transform:rotate(7deg); /* IE 9 */
+-webkit-transform:rotate(7deg);
 }
-
-.dancer.third {
-  -webkit-animation: third 10s ease-in;
-}
-
-.dancer.fourth {
-  -webkit-animation: fourth 0.5s;
+html {
+  background: #333333;
+  overflow: hidden;
 }

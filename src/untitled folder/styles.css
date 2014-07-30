@@ -1,0 +1,129 @@
+body, html{
+  height:100%;
+  background-image : url(src/bg.jpg);
+  background-position : absolute;
+  background-size : 100%;
+}
+body{
+  margin: 0px;
+  background-color:#444;
+  font-size: 18px;
+}
+body, a:link, a:visited, a:active{
+  color: lightblue;
+}
+.title, .addDancerButton{
+  padding:5px 12px;
+  float:right;
+}
+.topbar{
+  height:32px;
+  background-color: #555;
+}
+.title{
+  background-color: #777;
+}
+.dancer{
+
+  position:absolute;
+}
+.jumpyDancer{
+  border:10px solid #1DF00A;
+    border-radius:10px;
+    position:absolute;
+}
+.tempDancer{
+  border:10px solid #D90AF0;
+    border-radius:10px;
+    position:absolute;
+}
+
+.lineUp {
+  float:right;
+  margin-left: auto;
+  margin-right: auto;
+}
+.lineupbar {
+  position: absolute;
+  display: inline;
+  height: 25px;
+  width: 100%;
+  top: 75%;
+  background-color: black;
+  z-index: 3;
+}
+.sam {
+  background-image: url(src/samuel_jackson.png);
+  background-size: 70px 70px;
+  width: 70px;
+  height: 70px;
+  display: block;
+  float: left;
+  z-index: 4;
+}
+.theCage{
+  background-image: url(src/nicolas_cage.png);
+  background-size: 70px 70px;
+  width: 70px;
+  height: 70px;
+  display: block;
+  float: left;
+  z-index: 4;
+}
+.nigel{
+  background-image: url(src/lesia.gif);
+  background-size: 70px 70px;
+  width: 70px;
+  height: 70px;
+  display: block;
+  float: left;
+  z-index: 4;
+}
+.tiltLeft{
+  transform:rotate(7deg);
+-ms-transform:rotate(7deg); /* IE 9 */
+-webkit-transform:rotate(7deg);
+}
+html {
+  background: #333333;
+  overflow: hidden;
+}
+
+@-webkit-keyframes first {
+    50% {
+        margin-left: 1100px;
+    }
+}
+
+@-webkit-keyframes second {
+    50% {
+        margin-top: 700px;
+    }
+}
+
+@-webkit-keyframes third {
+    50% {
+        margin-top: 700px;
+        margin-left: 1100px;
+    }
+}
+
+@-webkit-keyframes fourth {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+
+.dancer.first {
+  -webkit-animation: first 3s linear;
+}
+.dancer.second {
+  -webkit-animation: second 3s ease-in-out;
+}
+
+.dancer.third {
+  -webkit-animation: third 3s ease-in;
+}
+
+.dancer.fourth {
+  -webkit-animation: fourth 0.5s;
+}

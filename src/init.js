@@ -28,5 +28,53 @@ $(document).ready(function(){
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
+    animateDiv(dancer.$node);
+  });
+
+  var randomDance = function() {
+
+  };
+
+  $(".lineUp").on("click", function(event) {
+    // for (var i = 0; i < window.dancers.length; i++) {
+    //   window.dancers[i].setPosition('75%');
+    // }
+    if($('.dancer').hasClass("dancer")){
+      $('.dancer').addClass("linedUp");
+      $('.dancer').removeClass("dancer");
+    } else{
+      $('.linedUp').addClass("dancer");
+      $('.linedUp').removeClass("linedUp");
+    }
+  $('.linedUp').stop(true, true);
+  $('.linedUp').animate({"position":"fixed",
+                        "top":"90%",
+                        "right":"50%",
+                        "z-index":"10"}, {
+                        duration: 4000,
+                        height: "easeOutBounce"
+    });
+  });
+
+  $(".dancer").mouseover(function(){
+    var degree = 180;
+    var node = $(this);
+    node.css({ WebkitTransform: 'rotate(' + degree + 'deg)'});
+  });
+
+  $(".dancer").click(function(){
+    var node = $(this);
+    node.animateWithCSS(
+      {width: "5em", height: "5em"}, // CSS properties to animate
+        2000,                       // Duration in ms
+        "cubic-bezier",             // The timing function
+        function(){                 // Callback
+          node.animateWithCSS(
+            {width: "3em", height: "3em"}, // CSS properties to animate
+              2000,                       // Duration in ms
+              "cubic-bezier");
+        }
+);
   });
 });

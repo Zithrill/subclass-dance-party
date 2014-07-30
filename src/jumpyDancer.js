@@ -1,8 +1,5 @@
 var JUMPYDancer = function(top, left, timeBetweenSteps){
-  this.$node = $('<span class="jumpyDancer"></span>');
-  this._timeBetweenSteps = 5000;
-
-
+  this.$node = $('<span class="dancer theCage"></span>');
   Dancer.call(this, top, left, timeBetweenSteps);
 };
 
@@ -12,7 +9,7 @@ JUMPYDancer.prototype.constructor = JUMPYDancer;
 
 JUMPYDancer.prototype.step = function(){
   Dancer.prototype.step.call(this);
-  if(this.$node.display === "none"){
+  if(this.$node.hasClass("fade")){
     this.$node.fadeIn(100);
   }
   else{
