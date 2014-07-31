@@ -54,27 +54,45 @@ body, a:link, a:visited, a:active{
 }
 .sam {
   background-image: url(src/samuel_jackson.png);
-  background-size: 70px 70px;
-  width: 70px;
-  height: 70px;
+  background-size: 8em 8em;
+  width: 8em;
+  height: 8em;
   display: block;
   float: left;
   z-index: 4;
 }
 .theCage{
   background-image: url(src/nicolas_cage.png);
-  background-size: 70px 70px;
-  width: 70px;
-  height: 70px;
+  background-size: 8em 8em;
+  width: 8em;
+  height: 8em;
   display: block;
   float: left;
   z-index: 4;
 }
 .nigel{
+  background-image: url(src/nigel_thornberry.png);
+  background-size: 8em 8em;
+  width: 8em;
+  height: 8em;
+  display: block;
+  float: left;
+  z-index: 4;
+}
+.lesia{
   background-image: url(src/lesia.gif);
-  background-size: 70px 70px;
-  width: 70px;
-  height: 70px;
+  background-size: 8em 8em;
+  width: 8em;
+  height: 8em;
+  display: block;
+  float: left;
+  z-index: 4;
+}
+.rick{
+  background-image: url(src/rick_santorum.png);
+  background-size: 8em 8em;
+  width: 8em;
+  height: 8em;
   display: block;
   float: left;
   z-index: 4;
@@ -88,3 +106,8 @@ html {
   background: #333333;
   overflow: hidden;
 }
+
+@keyframes bounce {
+
+}
+

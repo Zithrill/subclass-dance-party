@@ -30,9 +30,14 @@ $(document).ready(function(){
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
     animateDiv(dancer.$node);
+    randomDance(dancer.$node);
   });
 
-  var randomDance = function() {
+  var randomDance = function(node) {
+    var animations = ['bounce', 'swing', 'pulse', 'shake', 'rubberBand'];
+    var selector = Math.floor(Math.random() * 5);
+    var selection = "animated " + animations[selector];
+    $(node).addClass(selection);
 
   };
 

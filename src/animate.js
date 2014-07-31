@@ -70,8 +70,13 @@ var collider = function() {
           var position1 = getPositions($dancer[i]);
           var position2 = getPositions($dancer[j]);
           if(comparePositions(position1, position2)){
-            animateDiv($dancer[i], currentPosI);
-            animateDiv($dancer[j], currentPosJ);
+            $dancer.addClass(i,'spinNow');
+            $dancer.addClass(j,'spinNow');
+            setTimeout(function() {
+              $dancer.removeClass(i, 'spinNow');
+              $dancer.removeClass(j, 'spinNow');
+            },1500);
+
           }
         }
       }
